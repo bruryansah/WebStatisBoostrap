@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\http\controllers\IniCon;
 
 Route::get('index', function () {
     return view('index');
@@ -41,3 +42,5 @@ Route::get('team', function () {
 Route::get('testimonial', function () {
     return view('testimonial');
 });
+
+Route::get('index',[IniCon::class,'index.html']);
